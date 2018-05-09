@@ -1,0 +1,97 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.inception.coinsero.TransactionFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:background="@drawable/primary_stroke_rounded_rectangle"
+        android:layout_margin="16dp"
+        android:id="@+id/option_btns">
+
+
+        <com.inception.coinsero.CustomTextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="ALL"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="@drawable/left_rounded_rectangle"
+            android:textColor="#ffffff"
+            android:id="@+id/all_transactions"
+            />
+
+        <com.inception.coinsero.CustomTextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="TODAY"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="@color/d_grey"
+            android:background="@drawable/primary_stroke_rectangle"
+            android:id="@+id/today_transactions"
+            />
+
+        <com.inception.coinsero.CustomTextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="MONTHLY"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="@color/d_grey"
+            android:id="@+id/monthly_transactions"
+
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/option_btns"
+        android:id="@+id/picker_layout"
+        android:weightSum="2"
+        android:visibility="gone"
+        >
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/picker_layout"
+        android:id="@+id/transaction_recycler">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/colorPrimary"
+        android:id="@+id/progress_bar"
+        />
+
+    <com.inception.coinsero.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No transaction found"
+        android:layout_centerInParent="true"
+        android:id="@+id/no_transactions"
+        android:textColor="@color/d_grey"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

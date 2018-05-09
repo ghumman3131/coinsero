@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@color/white"
+    >
+
+
+    <com.inception.coinsero.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Make Transaction"
+        android:textSize="16sp"
+        android:textColor="#000"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ccc"
+        android:layout_marginTop="10dp"/>
+
+        <com.inception.coinsero.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#535353"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:id="@+id/transaction_details"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+
+        <com.inception.coinsero.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEND"
+            android:textColor="@color/blue"
+            android:layout_alignParentRight="true"
+            android:id="@+id/send_btn"
+            android:textSize="16sp"
+            android:padding="10dp"/>
+
+
+
+        <com.inception.coinsero.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CANCEL"
+            android:textColor="#000"
+            android:layout_toLeftOf="@+id/send_btn"
+            android:layout_marginRight="20dp"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:id="@+id/cancel_btn"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>
